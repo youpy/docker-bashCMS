@@ -1,6 +1,9 @@
 FROM ubuntu:latest
 
+ENV LAST_UPDATED 2014-09-25
+
 RUN apt-get update -qq
+RUN apt-get dist-upgrade -qqy
 RUN apt-get install -qqy build-essential git make unzip tree curl nkf git python apache2
 
 RUN git clone https://github.com/usp-engineers-community/Open-usp-Tukubai
